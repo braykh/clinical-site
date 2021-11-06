@@ -1,4 +1,4 @@
-// const {validationResult} = require('express-validator');
+const {validationResult} = require('express-validator');
 const { Client } = require('@elastic/elasticsearch')
 const client = new Client({ node: 'http://localhost:9200' })
 
@@ -6,15 +6,14 @@ exports.createBloodTest = async (req, res, next) => {
     try {
 
         console.log(req.body);
-        // const errors = validationResult(req);
-        // if (!errors.isEmpty()) {
-        //     const error = new Error(errors.array()[0].msg);
-        //     error.statusCode = 422;
-        //     error.data = errors.array();
-        //     throw error;
-        // }
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            const error = new Error(errors.array()[0].msg);
+            error.statusCode = 422;
+            error.data = errors.array();
+            throw error;
+        }
     
-
         client.search({
              index: 'blood_test',
              body: {

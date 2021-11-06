@@ -1,7 +1,8 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { required } from '../../helpers/validators';
-import { Input } from '../../helpers/form-controls';
+import { required, validateText, validateNumber } from '../../helpers/validators';
+import { Input } from '../../helpers/Form/form-controls';
+import style from './BloodForm.module.css';
 
 function BloodForm(props) {
 
@@ -23,12 +24,12 @@ function BloodForm(props) {
 const Form = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <Field component={Input} name={"testName"} validate={[required]} placeholder={"Test name"} label="Test name"/>
-            <Field component={Input} name={"testValue"} validate={[required]} placeholder={"Test value"} label="Test value"/>
-            {props.error && <div className="">
+            <Field component={Input} name={"testName"} validate={[required, validateText]} placeholder={"Test name"} label="Test name"/>
+            <Field component={Input} name={"testValue"} validate={[required, validateNumber]} placeholder={"Test value"} label="Test value"/>
+            {props.error && <div className={style.formError}>
                 <span>{props.error}</span>
             </div>}
-            <div className="">
+            <div className={style.buttonWrap}>
                 <button disabled={props.pristine || props.submitting}>Add</button>
             </div>
         </form>

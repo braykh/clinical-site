@@ -1,0 +1,17 @@
+.resultsList ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.resultsList ul li{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.resultsList ul li.badResult{
+    background-color: rgb(247, 34, 70, .3)
+}
+.resultsList ul li.goodResult{
+    background-color: rgb(123, 168, 24, .3);
+}

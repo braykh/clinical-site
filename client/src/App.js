@@ -8,12 +8,12 @@ function App() {
       <div className="container">
 
         <section className="form-container">
-          form
+          <h2>Enter your blood test data</h2>
           <BloodFormContauner />
         </section>
 
         <section className="results-container">
-          results
+          <h2>Your results</h2>
           <BloodResultsContainer />
         </section>
       </div>

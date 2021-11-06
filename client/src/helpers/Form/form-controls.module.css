@@ -1,0 +1,26 @@
+.formField label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.formField input{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: 0;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.formField.error input{
+    border: 1px solid rgb(209, 51, 60);
+}
+.formField.error span{
+    color: rgb(209, 51, 60);
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.formField{
+    margin-top: 20px;
+}

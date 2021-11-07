@@ -11,6 +11,30 @@
        {  
           "name":"A1C",
           "threshold":4
+       },
+       {
+          "name": "Hemoglobin",
+          "threshold":18
+       },
+       {
+         "name": "Platelets",
+         "threshold":450
+       },
+       {
+         "name": "WBC-Leucocytes",
+         "threshold":11
+       },
+       {
+         "name": "RBC-Red Blood Cells",
+          "threshold":5
+       },
+       {
+         "name": "Glucose (B)",
+         "threshold":100
+       },
+       {
+         "name": "Protein Total (B)",
+         "threshold":8
        }
     ]
   }
